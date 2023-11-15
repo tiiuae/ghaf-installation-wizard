@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "wizard"
+version = "0.1.0"
+description = "Ghaf installation wizard"
+authors = ["Valentin Kharin <valentin.kharin@unikie.com>"]
+license = "Apache 2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+platformdirs = "^4.0.0"
+prompt-toolkit = "^3.0.41"
+
+[tool.poetry.scripts]
+wizard = 'wizard:main'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pyright]
+# https://github.com/microsoft/pyright/blob/main/docs/configuration.md
+useLibraryCodeForTypes = true
+exclude = [".cache"]
